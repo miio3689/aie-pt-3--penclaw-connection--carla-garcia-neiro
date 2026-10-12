@@ -1,0 +1,5 @@
+Al querer conectar Telegram con OpenClaw el bot respondía con errores de autenticación (HTTP 403) del proveedor LiteLLM. Revisé la configuración de modelos, la clave y el estado de autenticación, y al final vi que el modelo gpt-5.6-luna se había actualizado a gpt-6-luna. Actualizé la configuración y logré que el bot respondiera correctamente.
+
+En el proceso también desmarqué claude-opus-4-6 del selector de modelos para que el agente no intentara usarlo, ya que también me encontré con la dificultad de que quería usar ese modelo.
+
+Para la autorización con Zapier, la redirección a 127.0.0.1 fallaba porque apuntaba a mi ordenador y no al VPS. Lo resolví copiando la URL de redirección y ejecutándola con curl en el servidor.
